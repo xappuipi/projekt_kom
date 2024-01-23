@@ -157,7 +157,7 @@ class MojWidget(QWidget):
           
             data = header + message.encode('utf-8')
 
-            data = header + data
+            print(data)
             self.client_socket.send(len(header).to_bytes(4, byteorder='big'))
             self.client_socket.send(len(data).to_bytes(4, byteorder='big'))
 
